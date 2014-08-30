@@ -3,6 +3,7 @@ zuPu
 
 JS powfull dump!
 用法:
+
 前端(window): document.write(zuPu( var )) .
 
 后端(nodejs): var zuPu=require('zuPu.js').F .
