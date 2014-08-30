@@ -3,4 +3,4 @@ zuPu
 
 JS powfull dump!
 
-dw
+http://godmod.cn/zupu
