@@ -2,6 +2,7 @@ zuPu
 ====
 
 JS powfull dump!
+
 用法:
 
 前端(window): document.write(zuPu( var )) .
