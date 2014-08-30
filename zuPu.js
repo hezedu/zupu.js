@@ -80,7 +80,7 @@ for(var i in a)
 	id2=id;zu2=i;zu1=zu.join('.')+'.';
 	
 	tmp=(y>0) ? points(a[i],zu1+i,count,y) :  a[i];
-	if(tmp===0){tmp='<span noTtxt="1">'+mod.other(zuPu.is(a[i]),a[i],zu2)+'</span>';}
+	if(tmp==='GODMOD_ZHUANGYONG' && y===2){tmp='<span noTtxt="1">'+mod.other(zuPu.is(a[i]),a[i],zu2)+'</span>';}
 	zu.push(i);
 	idarr.push(id);
 	idarr2=idarr.join('-');
@@ -95,28 +95,21 @@ function points(o,z,ic,y){
 var len=point.length,i=0;
 for(;i<len;i=i+1){
 if(point[i][0]===o){
-return '<span noTtxt="1"> = <a style="cursor:pointer;text-decoration:underline;color:royalblue" onclick="zuPu.hreff(\'dw_zupu_'+point[i][2]+'\')">'+point[i][1]+' ['+point[i][2]+'</a></span>';
+return '<span noTtxt="1"> = <a style="cursor:pointer;text-decoration:underline;color:royalblue" onclick="zuPu.href(\'dw_zupu_'+point[i][2]+'\')">'+point[i][1]+' ['+point[i][2]+'</a></span>';
 }
 }
 point[len]=[o,z,ic];
-if(y===2){
-return 0;
+if(y===2){ 
+return 'GODMOD_ZHUANGYONG';
 }
 return  o;
 }
 dump+='</pre>';
 return dump;
 }
-///族谱用到的函数////////////////////////////////////////////////////////////////////////////
+//族谱用到的函数/////////////////////////////////////////////////
 var zuPu =zuPu || function(){};
-zuPu.head=(function(){
-if(typeof(document)!=='undefined'){
-document.write("<style>.dw_zupu_show{padding:10px;font-family:'Courier new';word-wrap:break-word;font-size:16px;}.dw_zupu_first:hover{background:#FFEBCD;}.dw_zupu_wai{background:fuchsia;font-size:12px}.dw_zupu_Function , .dw_same{color:blue}.dw_zupu_same1{color:darkgoldenrod}.dw_zupu_Object{color:red}.dw_zupu_Array{color:orangered}.dw_zupu_String{color:yellowgreen}.dw_zupu_Number{color:green}.dw_zupu_Boolean{color:darkgoldenrod}.dw_zupu_Other{font-style:italic;}.dw_zupu_Undefined , .dw_zupu_Null{color:silver}.dw_zupu_zu1{color:#fff;}.dw_zupu_first:hover .dw_zupu_zu1{color:#999}.dw_zupu_count{float:right;color:dimgray;font-size:12px}\
-.dw_zupu_fund{display:none;font-size:14px;color:#001432}.dw_zupu_funb{cursor:pointer}\
-.dw_zupu_funj{display:inline-block;height:14px;width:14px;border:1px solid #666;line-height:14px;text-align:center;margin:1px}\
-</style>");
-}
-})();
+
 zuPu.toTXT = function(str) {
 //Html结构转字符串形式显示
     //var RexStr = /\<|\>|\"|\'|\&|　| /g;
@@ -152,7 +145,6 @@ zuPu.toTXT = function(str) {
     );
     return str;
 }
-
 zuPu.is = function(obj){
 return Object.prototype.toString.call(obj).slice(8,-1);
 }
@@ -174,22 +166,6 @@ return false;
 return false;
 }
 }
-zuPu.hreff = function(b){
-var a=document.getElementById(b);
-var top = a.offsetTop;
-document.documentElement.scrollTop = document.body.scrollTop =top-200;
-a.parentNode.style.background='yellow';
-setTimeout("document.getElementById(\'"+b+"\').parentNode.style.background='none'",3000);
-}
-zuPu.showChild = function(a){
-var last=a.lastChild;
-last.innerHTML=(last.innerHTML!='+') ? '+' : '-';
-a=a.nextSibling;
-a.style.display= (a.style.display!='block') ? 'block' :"none";
-}
-zuPu.otherShow=function(zu){
-location=location+'.'+zu;
-}
 zuPu.strHide=function(a,L,s){
 s=s||20;
 L=L||200;
@@ -199,13 +175,6 @@ return '<span class="dw_zupu_funj" style="cursor:pointer;margin-right:10px;color
 }else{
 return zuPu.toTXT(a);
 }
-}
-zuPu.showNext=function(a){
-a.innerHTML=(a.innerHTML!='+') ? '+' : '-';
-var a1=a.nextSibling.nextSibling,a2=a1.nextSibling;
-dis0=a1.style.display;
-a1.style.display =a2.style.display;
-a2.style.display =dis0;
 }
 zuPu.color=function(str) {
 var RexStr = /\/\/([\s\S]*?)\n+|\/\*([\s\S]*?)\*\/+|'([\s\S]*?)'+|"([\s\S]*?)"+/g;
@@ -240,5 +209,49 @@ var RexStr = /\/\/([\s\S]*?)\n+|\/\*([\s\S]*?)\*\/+|'([\s\S]*?)'+|"([\s\S]*?)"+/
     }
     );
     return str;
+}
+//只在前端用
+if(typeof(window)!=='undefined'){
+zuPu.head=(function(){
+document.write("<style>.dw_zupu_show{padding:10px;font-family:'Courier new','微软雅黑';\
+word-wrap:break-word;font-size:16px;white-space: pre-wrap}\
+.dw_zupu_first:hover{background:#e8e8ff;}\
+.dw_zupu_wai{background:fuchsia;font-size:12px}\
+.dw_zupu_Function , .dw_same{color:blue}\
+.dw_zupu_same1{color:darkgoldenrod}.dw_zupu_Object{color:red}\
+.dw_zupu_Array{color:orangered}.dw_zupu_String{color:yellowgreen}.dw_zupu_Number{color:green}\
+.dw_zupu_Boolean{color:darkgoldenrod}.dw_zupu_Other{font-style:italic;}\
+.dw_zupu_Undefined , .dw_zupu_Null{color:silver}.dw_zupu_zu1{color:#fff;}\
+.dw_zupu_first:hover .dw_zupu_zu1{color:#999}\
+.dw_zupu_count{float:right;color:dimgray;font-size:12px;font-family:'Georgia'}\
+.dw_zupu_fund{display:none;font-size:14px;color:#001432;}\
+.dw_zupu_funb{cursor:pointer}\
+.dw_zupu_funj{display:inline-block;height:14px;width:14px;border:1px solid #666;line-height:14px;text-align:center;margin:1px}\
+</style>");
+})();
+zuPu.href = function(b){
+var a=document.getElementById(b);
+var top = a.offsetTop;
+document.documentElement.scrollTop = document.body.scrollTop =top-200;
+a.parentNode.style.background='yellow';
+setTimeout("document.getElementById(\'"+b+"\').parentNode.style.background='none'",3000);
+}
+zuPu.showChild = function(a){
+var last=a.lastChild;
+last.innerHTML=(last.innerHTML!='+') ? '+' : '-';
+a=a.nextSibling;
+a.style.display= (a.style.display!='block') ? 'block' :"none";
+}
+zuPu.otherShow=function(zu){
+location=location+'.'+zu;
+}
+zuPu.showNext=function(a){
+a.innerHTML=(a.innerHTML!='+') ? '+' : '-';
+var a1=a.nextSibling.nextSibling,a2=a1.nextSibling;
+dis0=a1.style.display;
+a1.style.display =a2.style.display;
+a2.style.display =dis0;
+}
+//前端end
 }
 if(typeof exports !='undefined')exports.F=zuPu;
