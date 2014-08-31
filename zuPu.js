@@ -58,7 +58,7 @@ if(fin==0){
 dump+=mod.type(ty)+mod.native;
 }else{
 var text=zuPu.toTXT(a.toString());
-text=zuPu.color(text);
+//text=zuPu.color(text);
 dump+='<span  class="dw_zupu_funb"  onclick="zuPu.showChild(this)">'+mod.type(ty)+'<span class="dw_zupu_funj">+</span></span><div class="dw_zupu_fund">'+text+'</div>';
 }
 break;
