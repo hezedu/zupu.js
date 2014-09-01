@@ -214,7 +214,7 @@ var RexStr = /\/\/([\s\S]*?)\n+|\/\*([\s\S]*?)\*\/+|'([\s\S]*?)'+|"([\s\S]*?)"+/
 if(typeof(window)!=='undefined'){
 zuPu.head=(function(){
 document.write("<style>.dw_zupu_show{padding:10px;font-family:'Courier new','微软雅黑';\
-word-wrap:break-word;font-size:16px;white-space: pre-wrap}\
+word-wrap:break-word;font-size:16px;}\
 .dw_zupu_first:hover{background:#e8e8ff;}\
 .dw_zupu_wai{background:fuchsia;font-size:12px}\
 .dw_zupu_Function , .dw_same{color:blue}\
