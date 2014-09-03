@@ -171,7 +171,7 @@ s=s||20;
 L=L||200;
 var len=a.length,len1=len-s-s;
 if(len>L && L>s+s){
-return '<span class="dw_zupu_funj" style="cursor:pointer;margin-right:10px;color:yellowgreen" onclick="zuPu.showNext(this)">+</span><span>'+zuPu.toTXT(a.substr(0,s))+'</span><span style="color:yellowgreen;display:inline;">...('+len1+')...</span><span style="display:none">'+zuPu.toTXT(a.substr(s,len1))+'</span>'+zuPu.toTXT(a.substr(-s,s));
+return '<span class="dw_zupu_funj" style="cursor:pointer;margin-right:10px;color:#FFF;background:yellowgreen;" onclick="zuPu.showNext(this)">+</span><span>'+zuPu.toTXT(a.substr(0,s))+'</span><span style="color:yellowgreen;display:inline;">...('+len1+')...</span><span style="display:none">'+zuPu.toTXT(a.substr(s,len1))+'</span>'+zuPu.toTXT(a.substr(-s,s));
 }else{
 return zuPu.toTXT(a);
 }
