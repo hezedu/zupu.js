@@ -11,11 +11,19 @@ JS powfull dump!
 
 
 后端(nodejs): 
+
 var zuPu=require('zuPu.js').F .
+
 记住一定加 .F 哦 .
+
 MUST BE .F  .
+
 然后 
+
 res.write(zuPu( var )) .
+
 (pS.前端也要加载zuPu.js,不然没样式)
+
 demo:
+
 http://godmod.cn/zupu
