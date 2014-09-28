@@ -1,6 +1,6 @@
 {
   "name" : "zuPu.js",
   "version":"0.0.1",
-  "main":"./index",
+  "main":"./zuPu.js",
   "description":"JS powfull dump!"
 }
