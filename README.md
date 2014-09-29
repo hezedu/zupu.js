@@ -9,7 +9,7 @@ npm install zupu;
 <h2>用法</h2>
 <h3>前端(browser)：</h3>
 只需:<br/>
-&lt;script src="<span style="color:#999">node_modules路径/</span>zuPu.js " &gt;&lt;/ script &gt;
+&lt;script src="<span style="color:#999">node_modules路径/</span>zuPu.js " &gt;&lt;/ script &gt;<br/>
 (window): document.write(zuPu( var )) .<br/>
 注意:这里zuPu是大写!
 
