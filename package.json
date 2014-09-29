@@ -1,13 +1,33 @@
 {
-  "name" : "zupu.js",
-  "version":"0.0.1",
-  "main":"./zuPu.js",
-   "repository": {
-   "type": "git",
-    "url": "git://github.com/hezedu/zuPu"
+  "name": "zupu.js",
+  "version": "0.0.2",
+  "main": "zuPu",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/hezedu/zuPu.git"
   },
-  "author":"hezedu",
-  "licenses":"MIT",
-  "email":"hezedu@hotmail.com",
-  "description":"JS powfull dump!"
+
+  "author": {
+    "name": "hezedu"
+  },
+   "maintainers": [
+    {
+      "name": "hezedu",
+      "email": "hezedu@hotmail.com"
+    }
+  ],
+
+  "licenses": "MIT",
+  "email": "hezedu@hotmail.com",
+  "description": "JS powfull dump!",
+  "readme": "zuPu\r\n====\r\n\r\nJS powfull dump!\r\n\r\n用法:\r\n\r\n前端(browser)：\r\n<script src=\"zuPu.js\"></script>\r\n(window): document.write(zuPu( var )) .\r\n\r\n\r\n后端(nodejs): \r\n\r\nvar zuPu=require('zuPu.js').F .\r\n\r\n<script src=\"zuPu.js\"></script>\r\n\r\n记住一定加 .F 哦 .\r\n\r\nMUST BE .F  .\r\n\r\n然后 \r\n\r\nres.write(zuPu( var )) .\r\n\r\ndemo:\r\n\r\nhttp://godmod.cn/zupu\r\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/hezedu/zuPu/issues"
+  },
+  "homepage": "https://github.com/hezedu/zuPu",
+  "_id": "zupu.js@0.0.1",
+  "scripts": {},
+  "_shasum": "c4894021538be96467550b7e13897ec3e80e4e46",
+  "_from": "zupu.js@"
 }
