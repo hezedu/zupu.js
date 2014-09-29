@@ -15,7 +15,7 @@ npm install zupu;
 
 <h3>后端(nodejs): </h3>
 <div>var zupu=require('zupu')<span style="color:red">.F </span>.</div>
-这里zupu是小写.记住一定加 .F 哦  <br/>
+记住一定加 .F 哦  <br/>
 还有再加上前端不然没样式:<br/>
 &lt;script src="<span style="color:#999">node_modules路径/</span>zuPu.js " &gt;&lt;/ script &gt;<br/>
 然后 <br/>
