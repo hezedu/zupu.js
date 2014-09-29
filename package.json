@@ -1,9 +1,13 @@
 {
-  "name" : "zuPu.js",
+  "name" : "zupu.js",
   "version":"0.0.1",
   "main":"./zuPu.js",
    "repository": {
-    "url": "https://github.com/hezedu/zuPu"
+   "type": "git",
+    "url": "git://github.com/hezedu/zuPu"
   },
+  "author":"hezedu",
+  "licenses":"MIT",
+  "email":"hezedu@hotmail.com",
   "description":"JS powfull dump!"
 }
