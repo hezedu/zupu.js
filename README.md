@@ -2,6 +2,8 @@ zuPu
 ====
 
 JS powfull dump!
+
+
 <h2>安装</h2>
 npm install zupu;
 <h2>用法</h2>
