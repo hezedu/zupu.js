@@ -4,7 +4,7 @@
   "main": "zuPu.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/hezedu/zuPu.git"
+    "url": "git://github.com/hezedu/zuPu.git"
   },
 
   "author": {
