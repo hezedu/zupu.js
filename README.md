@@ -12,7 +12,7 @@ a.a2=a;
    this.[1]a2 = this [0 <br/>
 的结果.
 <h2>安装</h2>
-npm install zupu;
+npm install zupu.js(不是zupu);
 <h2>用法</h2>
 <h3>前端(browser)：</h3>
 只需:<br/>
