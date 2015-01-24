@@ -1,7 +1,7 @@
 {
   "name": "zupu",
   "version": "0.0.2",
-  "main": "zuPu.js",
+  "main": "zupu.js",
   "repository": {
     "type": "git",
     "url": "http://github.com/hezedu/zuPu.git"
