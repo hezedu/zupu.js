@@ -3,8 +3,8 @@ zuPu
 
 JS powfull dump!<br/>
 并且不会陷入死循环.比如 : <br/>
-var a={a1:'a1' }
-a.a2=a; 
+var a={a1:'a1' };<br/>
+a.a2=a; <br/>
 用for in 会死掉. 事实上其它任何语言遍历都会死掉.<br/>
 而用zupu会得到: <br/>
 [0]this=>Object <br/>
@@ -13,11 +13,11 @@ a.a2=a;
 的结果.<br/>
 可以遍历 window 对象(除了IE);
 <h2>安装</h2>
-npm install zupu.js (不是zupu);
+npm install zupu.js (不是zupu,第一次用npm 多加了 .js);
 <h2>用法</h2>
 <h3>前端(browser)：</h3>
 只需:<br/>
-&lt;script src="zuPu.js " &gt;&lt;/ script &gt;<br/>
+&lt;script src="zupu.js " &gt;&lt;/ script &gt;<br/>
 document.write(zupu( var ));<br/>
 
 <h3>后端(nodejs): </h3>

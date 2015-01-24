@@ -4,7 +4,7 @@ function zupu(a) {
         suoyin: function(qian, id, hou) {
             return '<span class="dw_zupu_zu1">' + qian + '</span><span style="color:black">[' + (id) + ']' + hou + '</span>';
         },
-        type: function(type) {
+        type: function(type) { 
             return '=&gt;<b class="dw_zupu_' + type + '">' + type + '</b>';
         },
         other: function(type, ot, i) {
@@ -309,5 +309,6 @@ word-wrap:break-word;font-size:16px;}\
             <scr'+'ipt>' + zupu_init + '</scr'+'ipt>'); 
 
     }
+    //2015.1.24 19:34
     module.exports=zupu;
 }
