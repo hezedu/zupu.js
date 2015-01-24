@@ -1,4 +1,4 @@
-zuPu
+zupu.js
 ====
 
 JS powfull dump!<br/>
