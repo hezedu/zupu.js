@@ -1,6 +1,6 @@
 {
-  "name": "zupu",
-  "version": "0.0.2",
+  "name": "zupu.js",
+  "version": "1.0.0",
   "main": "zupu.js",
   "repository": {
     "type": "git",
