@@ -8,7 +8,7 @@ type:function(type){
 return '=&gt;<b class="dw_zupu_'+type+'">'+type+'</b>';
 },
 other:function(type,ot,i){
-if(ot.toString().substr(0,8)!=='[object ' ){
+if(ot.toString().substr(0,8)!=='[object ' ){ 
 return '=&gt;<b class="dw_zupu_Other">'+type+'</b>= '+zuPu.toTXT(ot.toString());
 }else{
 if(typeof i==='undefined' || typeof window ==='undefined'){
