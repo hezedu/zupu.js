@@ -1,15 +1,22 @@
 zupu.js
 ====
 
-JS powfull dump!<br/>
-并且不会陷入死循环.比如 : <br/>
-var a={a1:'a1' };<br/>
-a.a2=a; <br/>
+###JS powfull dump!
+不会陷入死循环.比如 :
+```js
+var a={a1:'a1' };
+a.a2=a;
+for(var i in a){
+//died
+}
+```
 用for in 会死掉. 事实上其它任何语言遍历都会死掉.<br/>
-而用zupu会得到: <br/>
-[0]this=>Object <br/>
-   this.[0]a1=>String = "a1" <br/>
-   this.[1]a2 = this [0 <br/>
+而用zupu会得到: 
+```js
+[0]this=>Object
+   this.[0]a1=>String = "a1" 
+   this.[1]a2 = this [0 
+```
 的结果.<br/>
 可以遍历 window 对象(除了IE);
 <h2>安装</h2>
