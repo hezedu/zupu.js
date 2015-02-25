@@ -1,7 +1,7 @@
 zupu.js
 ====
 
-###JS powfull dump!
+###JS powfull var dump!
 不会陷入死循环.比如 :
 ```js
 var a={a1:'a1'};
