@@ -4,14 +4,14 @@ zupu.js
 ###JS powfull dump!
 不会陷入死循环.比如 :
 ```js
-var a={a1:'a1' };
+var a={a1:'a1'};
 a.a2=a;
 for(var i in a){
 //died
 }
 ```
 用for in 会死掉. 事实上其它任何语言遍历都会死掉.<br/>
-而用zupu会得到: 
+而用zupu会得到(在浏览器输出): 
 ```js
 [0]this=>Object
    this.[0]a1=>String = "a1" 
