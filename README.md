@@ -25,7 +25,7 @@ for(var i in a){
 <h3>前端(browser)：</h3>
 只需:<br/>
 ```js
-<script src="zupu.js "></script>;
+<script src="zupu.js"></script>;
 document.write(zupu( var ));
 ```
 <h3>后端(nodejs): </h3>
