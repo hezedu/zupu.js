@@ -25,7 +25,7 @@ for(var i in a){
 <h3>前端(browser)：</h3>
 只需:<br/>
 ```js
-&lt;script src="zupu.js " &gt;&lt;/ script &gt;
+<script src="zupu.js "></script>;
 document.write(zupu( var ));
 ```
 <h3>后端(nodejs): </h3>
@@ -34,7 +34,7 @@ var http = require('http');
 var zupu = require('zupu.js');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
-  zupu.init(res);
+  zupu.init(res);//初始代，只需一次
   res.write(zupu(process));
   res.end('Hello World\n');
 }).listen(1337, '127.0.0.1');
