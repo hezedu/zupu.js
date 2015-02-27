@@ -26,7 +26,7 @@ for(var i in a){
 只需:<br/>
 ```js
 <script src="zupu.js"></script>;
-document.write(zupu( var ));
+document.write(zupu( //变量 ));
 ```
 <h3>后端(nodejs): </h3>
 ```js
@@ -35,7 +35,7 @@ var zupu = require('zupu.js');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   zupu.init(res);//初始代，只需一次
-  res.write(zupu(process));
+  res.write(zupu(global));
   res.end('Hello World\n');
 }).listen(1337, '127.0.0.1');
 console.log('Server running at http://127.0.0.1:1337/');
