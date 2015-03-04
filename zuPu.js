@@ -74,7 +74,7 @@ function zupu(a) {
                 dump += mod.type(ty) + mod.native;
             } else {
                 var text = zupu.toTXT(a.toString());
-                //text=zupu.color(text);
+                text=zupu.color(text);
                 dump += '<span  class="dw_zupu_funb"  onclick="zupu.showChild(this)">' + mod.type(ty) + '<span class="dw_zupu_funj">+</span></span><div class="dw_zupu_fund">' + text + '</div>';
             }
             break;
@@ -195,40 +195,41 @@ zupu.strHide = function(a, L, s) {
         return zupu.toTXT(a);
     }
 }
-zuPu.color=function(str) {
-var RexStr = /\/\/([\s\S]*?)\n+|\/\*([\s\S]*?)\*\/+|'([\s\S]*?)'+|"([\s\S]*?)"+/g;
-    str = str.replace(RexStr,
-    function (MatchStr) {
-    if(MatchStr.substr(0,2)==='//' || MatchStr.substr(0,2)==='/*'){
-    return "<span style='color:mediumseagreen'>"+MatchStr+"</span>";
-    }else if(MatchStr[0]==="'" || MatchStr[0]==='"'){
-    return "<span style='color:#808080'>"+MatchStr+"</span>";
-    }/*else{
-        switch (MatchStr.match(/\S+/g).toString()) {
-            case "this":
-                return MatchStr.fontcolor('red');
-                break;            
-                case "new":
-                case "with":
-                return MatchStr.fontcolor('red').bold().big();
-                break;
-                case "typeof":
-                return "<i style='color:#darkslategray;font-weight:bold'>"+MatchStr+"</i>";
-                break;
-               case "return":
-               return "<b style='color:blue'>"+MatchStr+"</b>";
-                break;
+zupu.color = function(str) {
+        var RexStr = /\/\/([\s\S]*?)\n+|\/\*([\s\S]*?)\*\/+|'([\s\S]*?)'+|"([\s\S]*?)"+/g;
+        str = str.replace(RexStr,
+            function(MatchStr) {
+                if (MatchStr.substr(0, 2) === '//' || MatchStr.substr(0, 2) === '/*') {
+                    return "<span style='color:mediumseagreen'>" + MatchStr + "</span>";
+                } else if (MatchStr[0] === "'" || MatchStr[0] === '"') {
+                    return "<span style='color:#808080'>" + MatchStr + "</span>";
+                }
+                /*else{
+                        switch (MatchStr.match(/\S+/g).toString()) {
+                            case "this":
+                                return MatchStr.fontcolor('red');
+                                break;            
+                                case "new":
+                                case "with":
+                                return MatchStr.fontcolor('red').bold().big();
+                                break;
+                                case "typeof":
+                                return "<i style='color:#darkslategray;font-weight:bold'>"+MatchStr+"</i>";
+                                break;
+                               case "return":
+                               return "<b style='color:blue'>"+MatchStr+"</b>";
+                                break;
 
-            default:
-            return "<b style='color:dodgerblue'>"+MatchStr+"</b>";
-            //return test.match(/\S+/g);
-                break;
-        }
-    }*/
+                            default:
+                            return "<b style='color:dodgerblue'>"+MatchStr+"</b>";
+                            //return test.match(/\S+/g);
+                                break;
+                        }
+                    }*/
+            }
+        );
+        return str;
     }
-    );
-    return str;
-}
 //只在前端用
 if (typeof(window) !== 'undefined') {
     zupu.head = (function() {
