@@ -195,23 +195,15 @@ zupu.strHide = function(a, L, s) {
         return zupu.toTXT(a);
     }
 }
-zupu.color = function(str) {
-    var RexStr = /\/\/([\s\S]*?)\n+|\/\*([\s\S]*?)\*\/+|(?=[^\\])'([\s\S ]*?)([^\\]')+/g;
-    var nozH = /(?=[^\\])/,
-        nozB = /([^\\]')/,
-        rexall = /([\s\S ]*?)/;
-    var RexStr = /(?=[^\\])'([\s\S ]*?)([^\\]')+/g;
-    str = str.replace(RexStr, function(MatchStr) {
-        if (MatchStr[0] === "'") {
-            return "<span style='color:#808080'>" + MatchStr + "</span>";
-        } else if (MatchStr[0] === "\"") {
-            return "<span style='color:#808080'>" + MatchStr + "</span>";
-        } else if (MatchStr[0] === "/") {
-            return "<span style='color:red'>" + MatchStr + "</span>";
-        } else return MatchStr;
-/*else if(MatchStr.substr(0,2)==='//' || MatchStr.substr(0,2)==='/*'){
+zuPu.color=function(str) {
+var RexStr = /\/\/([\s\S]*?)\n+|\/\*([\s\S]*?)\*\/+|'([\s\S]*?)'+|"([\s\S]*?)"+/g;
+    str = str.replace(RexStr,
+    function (MatchStr) {
+    if(MatchStr.substr(0,2)==='//' || MatchStr.substr(0,2)==='/*'){
     return "<span style='color:mediumseagreen'>"+MatchStr+"</span>";
-    }else{
+    }else if(MatchStr[0]==="'" || MatchStr[0]==='"'){
+    return "<span style='color:#808080'>"+MatchStr+"</span>";
+    }/*else{
         switch (MatchStr.match(/\S+/g).toString()) {
             case "this":
                 return MatchStr.fontcolor('red');
@@ -234,7 +226,6 @@ zupu.color = function(str) {
         }
     }*/
     }
-
     );
     return str;
 }
