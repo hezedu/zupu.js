@@ -20,7 +20,7 @@ for(var i in a){
 可以遍历 window 对象(除了IE);
 <h2>安装</h2>
 ###nodejs
-`npm install zupu.js` (注意有.###js后缀)
+`npm install zupu.js` (注意有__.js__后缀)
 <h2>用法</h2>
 <h3>前端(browser)：</h3>
 只需:<br/>
