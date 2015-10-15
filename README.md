@@ -20,7 +20,7 @@ for(var i in a){
 可以遍历 window 对象(除了IE);
 <h2>安装</h2>
 ###nodejs
-`npm install zupu.js` (注意有__.js__后缀)
+`npm install zupu.js` (注意有 ___.js___ 后缀)
 <h2>用法</h2>
 <h3>前端(browser)：</h3>
 只需:<br/>
@@ -40,6 +40,6 @@ http.createServer(function (req, res) {
 }).listen(1337, '127.0.0.1');
 console.log('Server running at http://127.0.0.1:1337/');
 ```
-### 注：用express框架的话，遍历像`req`这要的变量，会发生冲突。
+注：用express框架的话，遍历像`req`这要的变量，会发生冲突。
 <h2>demo:</h2>
 http://godmod.cn/zupu
