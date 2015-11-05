@@ -6,11 +6,8 @@ zupu.js
 ```js
 var a={a1:'a1'};
 a.a2=a;
-for(var i in a){
-//died
-}
 ```
-而用zupu会得到(在浏览器输出): 
+用zupu会得到(在浏览器输出): 
 ```js
 [0]this=>Object
    this.[0]a1=>String = "a1" 
