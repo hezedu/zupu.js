@@ -1,7 +1,7 @@
 zupu.js
 ====
 
-###JS powfull var dump!
+### JS powfull var dump!
 不会陷入死循环.比如 :
 ```js
 var a={a1:'a1'};
@@ -16,7 +16,7 @@ a.a2=a;
 的结果.<br/>
 可以遍历 window 对象(除了IE);
 <h2>安装</h2>
-###nodejs
+### nodejs
 `npm install zupu.js` (注意有 ___.js___ 后缀)
 <h2>用法</h2>
 <h3>前端(browser)：</h3>
