@@ -3,7 +3,7 @@ zupu.js
 
 ### JS powfull var dump!
 不会陷入死循环.比如 :
-```js
+```javascript
 var a={a1:'a1'};
 a.a2=a;
 ```
@@ -20,13 +20,14 @@ a.a2=a;
 `npm install zupu.js` (注意有 ___.js___ 后缀)
 <h2>用法</h2>
 <h3>前端(browser)：</h3>
-只需:<br/>
-```js
+只需
+
+```javascript
 <script src="zupu.js"></script>;
 document.write(zupu( //变量 ));
 ```
 <h3>后端(nodejs): </h3>
-```js
+```javascript
 var http = require('http');
 var zupu = require('zupu.js');
 http.createServer(function (req, res) {
